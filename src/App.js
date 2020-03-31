@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import data from './data';
 
@@ -13,6 +13,7 @@ function App() {
 
 	const addItem = item => {
 		// add the given item to the cart
+		setCart([item, ...cart])
 	};
 
 	return (
